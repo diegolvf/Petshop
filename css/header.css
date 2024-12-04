@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1150ab;
+    color: #f4f5fa;
+    filter: drop-shadow(0px 1px 1px #000000);
+}
+
+#logo_header {
+    width: 150px;
+    filter: drop-shadow(0px 1px 1px #000000);
+}
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header ul li {
+    justify-content: space-between;
+    font-family: 'Poppins','ArcadeClassic', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    margin: 20px;
+}
+ 
+.menu-toggle {
+    display: none;
+}
+
+nav.active ul li {
+    display: none;
+}
+
+#introducao {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Responsividade */
+
+
+
+@media screen and (min-width:320px) and (max-width: 999px) {
+
+    header {
+        display: flex;
+        padding: 10px 0;
+        z-index: 2;
+        position: relative;
+        max-width: 100%;
+        padding: 20px;
+        
+    }
+
+    .menu-toggle {
+        display: block; /*exibe o menu oculto*/
+        position: absolute;
+        cursor: pointer;
+        padding: 10px;
+        top: 30%;
+        right: 0;
+        padding-right: 20px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 35px;
+        height: 3px;
+        background-color: whitesmoke;
+        margin-bottom: 6px;
+        padding: 3px;
+        border-radius: 3px;
+        transition: all ease .2s;
+        filter: drop-shadow(0px 1px 1px #000000);
+    }
+
+    nav a.toggle {
+        display: block;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 5px;
+    }
+
+    nav ul {
+        display: none;
+    }
+    
+    nav.active ul {
+        display: flex; /*exibir a lista de navegação qdo o menu estiver ativo.*/
+        flex-direction: column;
+        justify-content: unset;
+        background-color: rgba(79, 67, 174);
+        position: absolute;
+        top: 93%;
+        right: 0;
+        width: 50%;
+        height: auto;
+        border-radius: 5px;
+        z-index: 1;
+        padding-bottom: 20px;
+        
+    }
+
+    nav.active ul li {
+        display: block;
+        text-align: center;
+        padding: 15px;
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav ul li {
+        font-size: 0.6rem;
+    }
+
+    nav.active ul li a {
+        display: block; 
+        padding: 0;   
+    }
+
+    #logo_header {
+        width: 135px;
+        filter: drop-shadow(0px 1px 1px #000000);
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width:431px) {
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: whitesmoke;
+        margin-bottom: 5px;
+        padding: 2px;
+        border-radius: 3px;
+        transition: all ease .2s;
+    }
+
+    nav ul li {
+        font-size: 0.5rem;
+    }
+
+    #logo_header {
+        max-width: 80px;
+    }
+
+}
+
+@media screen and (max-width:481px) {
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: whitesmoke;
+        margin-bottom: 5px;
+        padding: 2px;
+        border-radius: 3px;
+        transition: all ease .2s;
+    }
+
+
+    #logo_header {
+        width: 80px;
+        filter: drop-shadow(0px 1px 1px #000000);
+    }
+}

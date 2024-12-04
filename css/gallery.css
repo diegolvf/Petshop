@@ -1,0 +1,73 @@
+.galery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:  2vw;
+    padding: 0 2vw;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.galery-itens{
+    display: flex;
+    flex-wrap: wrap;
+    width: 340px;
+    height:250px;
+    border: 10px solid #4d96ff;
+    box-shadow: 5px 5px 5px #0006;
+    flex-grow: 1;
+}
+
+.galery-itens:hover{
+    transform: scale(1.3);
+    /*filter: grayscale(100%);   filtro preto e branco          */
+    transition: 0.5s linear;
+    border: 10px solid #0f4269;
+
+}
+
+.galery-itens img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
+/* ----Estilos Responsivos Celucares Grandes---- */
+
+@media screen and (max-width: 767px) {
+    
+    section {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .galery-itens {
+        width: 250px;
+        height:180px;
+    }
+
+    .galery-container {
+        justify-content: space-evenly;
+        gap:  3vw;
+        padding: 0 2vw;
+        max-width: 50%;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 320px;
+    }
+
+}

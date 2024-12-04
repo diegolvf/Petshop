@@ -1,0 +1,34 @@
+.slider {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto; /* Centraliza o slider na tela */
+    border-radius: 12px;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+.slider-item {
+    flex: 0 0 100%; /* Garante que cada item ocupe 100% da largura do slider */
+}
+
+.slider-item .img-slider {
+    width: 100%;
+    height: 1000px; /* Para manter a proporção da imagem */
+    object-fit: cover;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+}
+
+@media screen and (max-width: 576px) {
+    .slider-item .img-slider {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider-item .img-slider {
+        height: 300px;
+    }
+}
